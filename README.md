@@ -16,6 +16,10 @@ Agora é necessário "popular" o banco de dados com estas *"migrações"*:
 ```
 $ pipenv run python manage.py migrate
 ```
+Configure um usuário administrador:
+```
+$ pipenv run python manage.py createsuperuser
+```
 Com as tabelas do banco de dados criada, basta "subir" o servidor com:
 ```
 $ pipenv run python manage.py runserver
@@ -23,29 +27,9 @@ $ pipenv run python manage.py runserver
 
 Os seguintes endpoints foram criados:    
 * */admin/*
-* */especialidades/*
-* */especialidades/post/*
-* */especialidades/put/id*
-* */especialidades/delete/id*
-
-
-* */medicos/*
-**/medicos/post/*
-* */medicos/put/id*
-* */medicos/delete/id*
-
-
-* */consultas/*
-* */consultas/post/*
-* */consultas/put/id*
-* */consultas/delete/id*
-
-
-* */agendas/*
-* */agendas/post/*
-* */agendas/put/id*
-* */agendas/delete/id*
-
-
+* */especialidades/*  _(requer autenticação)_
+* */medicos/*  _(requer autenticação)_
+* */consultas/*  _(requer autenticação)_
+* */agendas/*  _(requer autenticação)_
 * */login/*
 * */cadastro/*
