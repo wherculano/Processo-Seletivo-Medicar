@@ -36,7 +36,7 @@ class Medico(models.Model):
 class Consultas(models.Model):
     dia = models.DateField()
     horario = models.TimeField()
-    data_agendamento = models.DateTimeField(auto_now_add=True)
+    data_agendamento = models.ForeignKey('Agendas', on_delete=models.CASCADE)
     medico = models.ForeignKey('Medico', on_delete=models.CASCADE)
 
     def __str__(self):
