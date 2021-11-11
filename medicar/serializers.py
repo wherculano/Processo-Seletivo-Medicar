@@ -1,5 +1,6 @@
-from .models import Especialidades, Medico, Consultas, Agendas, User
 from rest_framework import serializers
+
+from .models import Especialidades, Medico, Consultas, Agendas, User
 
 
 class EspecialidadesSerializer(serializers.ModelSerializer):

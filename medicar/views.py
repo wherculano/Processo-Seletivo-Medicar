@@ -1,10 +1,11 @@
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
+
+from medicar.models import Especialidades, Medico, Consultas, Agendas, User
 from .serializers import (EspecialidadesSerializer, MedicoSerializer, ConsultasSerializer,
                           AgendasSerializer, CadastroSerializer)
-from medicar.models import Especialidades, Medico, Consultas, Agendas, User
 
 
 # Especialidade
